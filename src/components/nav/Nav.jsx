@@ -4,11 +4,13 @@ import {FaHome, FaUserAstronaut} from 'react-icons/fa'
 import {MdLaptopChromebook, MdOutlineContactMail} from 'react-icons/md'
 import {RiServiceFill} from 'react-icons/ri'
 import {AiOutlineFundProjectionScreen} from 'react-icons/ai'
+import {useState} from 'react'
 
 const Nav = () => {
+  const [activeNav, setActiveNav] = useState('')
   return (
     <nav>
-      <a href="/"><FaHome/></a>
+      <a href="#" className={activeNav === '#' ? 'active' : ''}><FaHome/></a>
       <a href="#about"><FaUserAstronaut/></a>
       <a href="#experience"><MdLaptopChromebook/></a>
       <a href="#services"><RiServiceFill/></a>
