@@ -8,7 +8,7 @@ import {AiOutlineFundProjectionScreen} from 'react-icons/ai'
 const Nav = () => {
   return (
     <nav>
-      <a href="#"><FaHome/></a>
+      <a href="/"><FaHome/></a>
       <a href="#about"><FaUserAstronaut/></a>
       <a href="#experience"><MdLaptopChromebook/></a>
       <a href="#services"><RiServiceFill/></a>
