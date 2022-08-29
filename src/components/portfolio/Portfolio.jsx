@@ -56,7 +56,7 @@ const Portfolio = () => {
   return (
     <section id='portfolio'>
     <h5>My FullStack Portfolio</h5>
-    <h3>Recent Work</h3>
+    <h2>Recent Work</h2>
 
     <div className="container portfolio_container">
       {

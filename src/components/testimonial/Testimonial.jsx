@@ -3,6 +3,14 @@ import './testimonial.css'
 import GMG1 from '../../assets/game1.png'
 import GMG2 from '../../assets/game2.png'
 import GMG3 from '../../assets/game3.png'
+// Import Swiper React components
+import {Pagination} from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+// Import Swiper styles
+import 'swiper/css/navigation'
+import 'swiper/css'
+import 'swiper/css/pagination'
 
 const data = [
   {
@@ -32,13 +40,18 @@ const Testimonial = () => {
   return (
     <section id='portfolio'>
     <h5>My GameDev Portfolio</h5>
-    <h3>Checkout my recent Games!</h3>
+    <h2>Checkout my recent Games!</h2>
+    <h5>Swipe to view more</h5>
 
-    <div className="container portfolio_container">
+    <Swiper className="container portfolio_container"
+     modules={[Pagination]}
+      spaceBetween={40}
+      slidesPerView={1}
+      pagination={{ clickable: true }}>
       {
         data.map(({id, image, title, github, demo}) =>{
           return (
-            <article key={id} className="portfolio_item">
+            <SwiperSlide key={id} className="portfolio_item">
               <div className="portfolio_item-image">
                 <img src={image} alt={title}/>
               </div>
@@ -47,11 +60,11 @@ const Testimonial = () => {
                 <a href={github} className="btn" target="_blank" rel="noreferrer">Github</a>
                 <a href={demo} className="btn-primary" target="_blank" rel="noreferrer">Live Demo</a>
               </div>
-            </article>
+            </SwiperSlide>
           )
         })
       }
-    </div>
+    </Swiper>
     </section>
   )
 }
