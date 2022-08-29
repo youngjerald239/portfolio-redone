@@ -13,40 +13,48 @@ const Portfolio = () => {
     <h3>Recent Work</h3>
 
     <div className="container portfolio_container">
-      <article className="portfolio_container">
-        <div className="portfolio_image">
+      <article className="portfolio_item">
+        <div className="portfolio_item-image">
         <img src={IMG1} alt=""/>
         </div>
         <h3>This is a portfolio item title</h3>
         <a href="https://github.com/youngjerald239/Weather_App" className="btn" target="_blank" rel="noreferrer">Github</a>
         <a href="https://jweather-app.netlify.app/" className="btn-primary" target="_blank" rel="noreferrer">Live Demo</a>
       </article>
-      <article className="portfolio_container">
-        <div className="portfolio_image">
+      <article className="portfolio_item">
+        <div className="portfolio_item-image">
         <img src={IMG1} alt=""/>
         </div>
         <h3>This is a portfolio item title</h3>
         <a href="https://github.com/youngjerald239/Weather_App" className="btn" target="_blank" rel="noreferrer">Github</a>
         <a href="https://jweather-app.netlify.app/" className="btn-primary" target="_blank" rel="noreferrer">Live Demo</a>
       </article>
-      <article className="portfolio_container">
-        <div className="portfolio_image">
+      <article className="portfolio_item">
+        <div className="portfolio_item-image">
         <img src={IMG1} alt=""/>
         </div>
         <h3>This is a portfolio item title</h3>
         <a href="https://github.com/youngjerald239/Weather_App" className="btn" target="_blank" rel="noreferrer">Github</a>
         <a href="https://jweather-app.netlify.app/" className="btn-primary" target="_blank" rel="noreferrer">Live Demo</a>
       </article>
-      <article className="portfolio_container">
-        <div className="portfolio_image">
+      <article className="portfolio_item">
+        <div className="portfolio_item-image">
         <img src={IMG1} alt=""/>
         </div>
         <h3>This is a portfolio item title</h3>
         <a href="https://github.com/youngjerald239/Weather_App" className="btn" target="_blank" rel="noreferrer">Github</a>
         <a href="https://jweather-app.netlify.app/" className="btn-primary" target="_blank" rel="noreferrer">Live Demo</a>
       </article>
-      <article className="portfolio_container">
-        <div className="portfolio_image">
+      <article className="portfolio_item">
+        <div className="portfolio_item-image">
+        <img src={IMG1} alt=""/>
+        </div>
+        <h3>This is a portfolio item title</h3>
+        <a href="https://github.com/youngjerald239/Weather_App" className="btn" target="_blank" rel="noreferrer">Github</a>
+        <a href="https://jweather-app.netlify.app/" className="btn-primary" target="_blank" rel="noreferrer">Live Demo</a>
+      </article>
+      <article className="portfolio_item">
+        <div className="portfolio_item-image">
         <img src={IMG1} alt=""/>
         </div>
         <h3>This is a portfolio item title</h3>
