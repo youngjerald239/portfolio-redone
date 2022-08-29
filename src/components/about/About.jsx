@@ -33,6 +33,13 @@ const About = () => {
               <small>Pygame(Intermediate) Unity(Beginner) Unreal(Junior) Godot(Beginner)</small>
             </article>
           </div>
+            <p>
+              Bringing graphic design and customer service skills into my work as a full-stack developer, 
+               I bring a diverse set of skills not many have. Collaborative and analytical,
+               I provide a unique perspective and focus on the user in all of my projects.
+            </p>
+
+            <a href="#contact">Let's Chat!</a>
         </div>
       </div>
     </section>
