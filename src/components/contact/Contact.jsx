@@ -12,28 +12,28 @@ const Contact = () => {
       <div className="container contact_container">
           <div className="contact_options">
              <article className="contact_option">
-                <MdOutlineMailOutline/>
+                <MdOutlineMailOutline className='contact_option-icon'/>
                 <h4>Email</h4>
                 <h5>youngjerald239@gmail.com</h5>
-                <a href="mailto:youngjerald239@gmail.com" target="_blank">Send an Email</a>
+                <a href="mailto:youngjerald239@gmail.com" target="_blank" rel="noreferrer">Send an Email</a>
              </article>
              <article className="contact_option">
-                <BsLinkedin/>
+                <BsLinkedin className='contact_option-icon'/>
                 <h4>LinkedIn Message</h4>
                 <h5>youngjerald239@gmail.com</h5>
-                <a href="https://www.linkedin.com/in/jerald-young-232aa720a/" target="_blank">Connect with LinkedIn</a>
+                <a href="https://www.linkedin.com/in/jerald-young-232aa720a/" target="_blank" rel="noreferrer">Connect with LinkedIn</a>
              </article>
              <article className="contact_option">
-                <BsWhatsapp/>
+                <BsWhatsapp className='contact_option-icon'/>
                 <h4>WhatsApp</h4>
                 <h5>Phone Messenger</h5>
-                <a href="https://api.whatsapp.com/send?phone=18032717767" target="_blank">Send a message</a>
+                <a href="https://api.whatsapp.com/send?phone=18032717767" target="_blank" rel="noreferrer">Send a message</a>
              </article>
              <article className="contact_option">
-                <BsTwitter/>
+                <BsTwitter className='contact_option-icon'/>
                 <h4>Twitter</h4>
                 <h5>https://twitter.com/messages</h5>
-                <a href="https://twitter.com/messages/compose?recipient_id={JeraldYoung19}" target="_blank">Private Twitter message</a>
+                <a href="https://twitter.com/messages/compose?recipient_id={JeraldYoung19}" target="_blank" rel="noreferrer">Private Twitter message</a>
              </article>
           </div>
           <form action="">
