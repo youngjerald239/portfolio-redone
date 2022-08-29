@@ -58,16 +58,22 @@ const Portfolio = () => {
     <h3>Recent Work</h3>
 
     <div className="container portfolio_container">
-      <article className="portfolio_item">
-        <div className="portfolio_item-image">
-        <img src={IMG1} alt=""/>
-        </div>
-        <h3>This is a portfolio item title</h3>
-        <div className="portfolio_item-cta">
-          <a href="https://github.com/youngjerald239/Weather_App" className="btn" target="_blank" rel="noreferrer">Github</a>
-          <a href="https://jweather-app.netlify.app/" className="btn-primary" target="_blank" rel="noreferrer">Live Demo</a>
-        </div>
-      </article>
+      {
+        data.map(({id, image, title, github, demo}) =>{
+          return (
+            <article key={id} className="portfolio_item">
+              <div className="portfolio_item-image">
+                <img src={image} alt={title}/>
+              </div>
+              <h3>{title}</h3>
+              <div className="portfolio_item-cta">
+                <a href={github} className="btn" target="_blank" rel="noreferrer">Github</a>
+                <a href={demo} className="btn-primary" target="_blank" rel="noreferrer">Live Demo</a>
+              </div>
+            </article>
+          )
+        })
+      }
     </div>
     </section>
   )
