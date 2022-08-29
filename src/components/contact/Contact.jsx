@@ -1,9 +1,18 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import './contact.css'
 import {MdOutlineMailOutline} from 'react-icons/md'
 import {BsLinkedin, BsWhatsapp, BsTwitter} from 'react-icons/bs'
+import emailjs from 'emailjs-com'
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_zozgbjb', 'template_ulnndbh', form.current, 'PL4LSRuRjmMPHTMF_')
+      
+  };
   return (
     <section id='contact'>
       <h5>Get in Touch</h5>
@@ -36,7 +45,7 @@ const Contact = () => {
                 <a href="https://twitter.com/messages/compose?recipient_id={JeraldYoung19}" target="_blank" rel="noreferrer">Private Twitter message</a>
              </article>
           </div>
-          <form action="">
+          <form ref={form} onSubmit={sendEmail}>
              <input type="text" name='name' placeholder='Your Full Name' required/>
              <input type="email" name='email' placeholder='Email Address' required/>
              <textarea name="message" rows="7" placeholder='Enter your message here' required></textarea>
