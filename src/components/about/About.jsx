@@ -2,7 +2,12 @@ import React from 'react'
 import './about.css'
 import ME from '../../assets/me-about.png'
 import {GiAchievement, GiGameConsole} from 'react-icons/gi'
-import {FaDev} from 'react-icons/fa'
+import {FaDev, FaLaptopCode, FaHtml5, FaReact} from 'react-icons/fa'
+import {RiCustomerService2Fill} from 'react-icons/ri'
+import {MdOutlineSecurityUpdateWarning} from 'react-icons/md'
+import {FcSupport} from 'react-icons/fc'
+import {SiJavascript, SiCsswizardry, SiPython, SiUnrealengine, SiGodotengine} from 'react-icons/si'
+import {DiRuby, DiBootstrap, DiUnitySmall} from 'react-icons/di'
 
 const About = () => {
   return (
@@ -20,17 +25,17 @@ const About = () => {
             <article className='about_card'>
               <GiAchievement className='about_icon'/>
               <h5>Experience</h5>
-              <small>1.5 years Fullstack Developing. Customer Service. Technical Support. 24-hour Banker experience. Smartphone troubleshooting experience. Home-Security device Troubleshooting(Vivint) Billing(smartphone,banking,home-security) SalesForce tools customer service experience</small>
+              <small><RiCustomerService2Fill/><MdOutlineSecurityUpdateWarning/><FaLaptopCode/><FcSupport/></small>
             </article>
             <article className='about_card'>
               <FaDev className='about_icon'/>
               <h5>DevTools</h5>
-              <small>Html(Intermediate) JavaScript(Intermediate) CSS(Intermediate) React(Intermediate) Python(Junior) Ruby(Junior) TailWind(Junior) NextJs(Junior)</small>
+              <small><FaHtml5/><SiJavascript/><SiCsswizardry/><FaReact/><DiBootstrap/><SiPython/><DiRuby/></small>
             </article>
             <article className='about_card'>
               <GiGameConsole className='about_icon'/>
               <h5>Video Game Developer</h5>
-              <small>Pygame(Intermediate) Unity(Beginner) Unreal(Junior) Godot(Beginner)</small>
+              <small><SiPython/><SiUnrealengine/><SiGodotengine/><DiUnitySmall/></small>
             </article>
           </div>
             <p>
