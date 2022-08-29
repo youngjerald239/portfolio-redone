@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
+    padding-bottom: 4rem;
 }
 
 .portfolio_item {
@@ -31,6 +32,10 @@
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+    background: var(--color-primary);
 }
 
 
