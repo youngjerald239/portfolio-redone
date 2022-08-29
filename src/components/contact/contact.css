@@ -18,7 +18,7 @@
     text-align: center;
     border: 1px solid transparent;
     transition: var(--transition);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 .contact_option:hover {
@@ -53,4 +53,20 @@ input, textarea {
     border: 2px solid var(--color-primary-variant);
     resize: none;
     color: var(--color-white);
+}
+
+/* ======================= MEDIA QUERIES (MEDIUM DEVICES) =============================== */
+@media screen and (max-width: 1024px) {
+   .contact.contact_container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+   }
+}
+
+
+/* ======================= MEDIA QUERIES (SMALL DEVICES) =============================== */
+@media screen and (max-width: 600px) {
+    .contact.contact_container {
+        width: var(--container-width-sm);
+    }
 }
