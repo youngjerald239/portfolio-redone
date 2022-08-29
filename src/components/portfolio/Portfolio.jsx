@@ -5,49 +5,50 @@ import IMG2 from '../../assets/portfolio2.png'
 import IMG3 from '../../assets/portfolio3.png'
 import IMG4 from '../../assets/portfolio4.png'
 import IMG5 from '../../assets/portfolio5.png'
+import IMG6 from '../../assets/portfolio6.png'
 
 const data = [
   {
     id: 1,
     image: IMG1,
-    title: 'Portfolio 1',
-    github: 'https://github.com/',
-    demo: 'https://github.com'
+    title: 'React Weather App',
+    github: 'https://github.com/youngjerald239/Weather_App',
+    demo: 'https://jweather-app.netlify.app/'
   },
   {
     id: 2,
     image: IMG2,
-    title: 'Portfolio 1',
-    github: 'https://github.com/',
-    demo: 'https://github.com'
+    title: 'MyRume Social App',
+    github: 'https://github.com/youngjerald239/MyRume-App',
+    demo: 'https://myrume-d26d4.firebaseapp.com/'
   },
   {
     id: 3,
     image: IMG3,
-    title: 'Portfolio 1',
-    github: 'https://github.com/',
-    demo: 'https://github.com'
+    title: 'TechFlix streaming App',
+    github: 'https://github.com/youngjerald239/techFlix',
+    demo: 'https://techflix-a72fb.web.app/'
   },
   {
     id: 4,
     image: IMG4,
-    title: 'Portfolio 1',
-    github: 'https://github.com/',
-    demo: 'https://github.com'
+    title: 'Chattable Social App',
+    github: 'https://github.com/youngjerald239/Chattable-app',
+    demo: 'https://chattable-ebfbb.web.app/'
   },
   {
     id: 5,
     image: IMG5,
-    title: 'Portfolio 1',
-    github: 'https://github.com/',
-    demo: 'https://github.com'
+    title: 'The Kat & KaPoodle App',
+    github: 'https://github.com/youngjerald239/Petcareapp-frontend',
+    demo: 'https://pet-care2.netlify.app/'
   },
   {
-    id: 1,
-    image: IMG1,
-    title: 'Portfolio 1',
-    github: 'https://github.com/',
-    demo: 'https://github.com'
+    id: 6,
+    image: IMG6,
+    title: 'Pokedex App',
+    github: 'https://github.com/youngjerald239/Pokedex',
+    demo: 'https://jerald-pokedex.netlify.app/'
   }
 ]
 
