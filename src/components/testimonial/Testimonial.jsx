@@ -46,7 +46,7 @@ const Testimonial = () => {
     <Swiper className="container portfolio_container"
      modules={[Pagination]}
       spaceBetween={40}
-      slidesPerView={1}
+      slidesPerView={2}
       pagination={{ clickable: true }}>
       {
         data.map(({id, image, title, github, demo}) =>{
