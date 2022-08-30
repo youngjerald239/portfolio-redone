@@ -59,7 +59,7 @@
 }
 
 .about_card small {
-    
+    justify-content: space-around;
     font-size: 0.8rem;
     color: var(--color-light);
 }

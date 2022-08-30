@@ -38,7 +38,7 @@ const data = [
 
 const Testimonial = () => {
   return (
-    <section id='portfolio'>
+    <section id='testimonial'>
     <h5>My GameDev Portfolio</h5>
     <h2>Checkout my recent Games!</h2>
     <h5>Swipe to view more</h5>
