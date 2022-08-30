@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.112b4bd6.css",
+    "main.js": "/static/js/main.689b17c4.js",
+    "static/js/787.fb771931.chunk.js": "/static/js/787.fb771931.chunk.js",
+    "static/media/game2.png": "/static/media/game2.0d2fb7da13b1e938e956.png",
+    "static/media/bg2-texture.jpg": "/static/media/bg2-texture.540417024eeb092ac345.jpg",
+    "static/media/portfolio6.png": "/static/media/portfolio6.c7dfae9345172c1f2223.png",
+    "static/media/portfolio3.png": "/static/media/portfolio3.75f2b870ea0eb484c45d.png",
+    "static/media/portfolio4.png": "/static/media/portfolio4.7296f23f057440a9e0e5.png",
+    "static/media/portfolio2.png": "/static/media/portfolio2.8332e5b262530ce49a17.png",
+    "static/media/portfolio5.png": "/static/media/portfolio5.715e200caa464829f531.png",
+    "static/media/game1.png": "/static/media/game1.bfdbd9e477c299a4c89c.png",
+    "static/media/me-about.png": "/static/media/me-about.7c5c06c9304f35376bda.png",
+    "static/media/portfolio1.png": "/static/media/portfolio1.15aafea54b7f87618282.png",
+    "static/media/game3.png": "/static/media/game3.5f10b924c0606f0127d5.png",
+    "static/media/me.png": "/static/media/me.c84570f90027daef1e10.png",
+    "static/media/CV.pdf": "/static/media/CV.cf731a58e839a415db39.pdf",
+    "index.html": "/index.html",
+    "main.112b4bd6.css.map": "/static/css/main.112b4bd6.css.map",
+    "main.689b17c4.js.map": "/static/js/main.689b17c4.js.map",
+    "787.fb771931.chunk.js.map": "/static/js/787.fb771931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.112b4bd6.css",
+    "static/js/main.689b17c4.js"
+  ]
+}
