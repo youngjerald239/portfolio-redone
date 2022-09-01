@@ -6,16 +6,17 @@
 }
 
 .portfolio_item {
-    background: var(--color-bg-variant);
+    border-color: var(--color-primary-variant);
+    background: transparent;
     padding: 1.2rem;
     border-radius: 1rem;
-    border: 1px solid transparent;
+    border: 1px solid var(--color-primary-variant) ;
     transition: var(--transition);
 }
 
 .portfolio_item:hover {
     border-color: var(--color-primary-variant);
-    background: transparent;
+    
 }
 
 .portfolio_item-image {
