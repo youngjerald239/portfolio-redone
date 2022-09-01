@@ -1,7 +1,7 @@
 import React, {useRef} from 'react'
 import './contact.css'
 import {MdOutlineMailOutline} from 'react-icons/md'
-import {BsLinkedin, BsWhatsapp, BsTwitter} from 'react-icons/bs'
+import {BsLinkedin, BsTwitter} from 'react-icons/bs'
 import emailjs from 'emailjs-com'
 
 const Contact = () => {
