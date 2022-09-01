@@ -50,6 +50,10 @@ header {
     overflow: hidden;
 }
 
+.me img {
+    border-radius: 4rem;
+}
+
 /* ================================ Scroll Down ========================= */
 
 .scroll_down {

@@ -125,9 +125,6 @@ const Experience = () => {
               </article>
             </div>
         </div>
-        <div className="experience_gamedev">
-
-        </div>
       </div>
     </section>
   )
