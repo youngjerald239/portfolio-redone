@@ -4,6 +4,7 @@ import GMG1 from '../../assets/game1.png'
 import GMG2 from '../../assets/game2.png'
 import GMG3 from '../../assets/game3.png'
 import GMG4 from '../../assets/game4.png'
+import GMG5 from '../../assets/game5.png'
 // Import Swiper React components
 import {Pagination} from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -41,6 +42,13 @@ const data = [
     title: 'Rocket Ravens',
     github: 'https://github.com/youngjerald239/JavaScript_Shooter',
     demo: 'https://roketravens.netlify.app/'
+  },
+  {
+    id: 5,
+    image: GMG5,
+    title: 'Shadow Runner',
+    github: 'https://github.com/youngjerald239/runningGame',
+    demo: 'https://shadowrunner.netlify.app/'
   }
 ]
 
