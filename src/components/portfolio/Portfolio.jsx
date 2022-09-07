@@ -6,6 +6,7 @@ import IMG3 from '../../assets/portfolio3.png'
 import IMG4 from '../../assets/portfolio4.png'
 import IMG5 from '../../assets/portfolio5.png'
 import IMG6 from '../../assets/portfolio6.png'
+import IMG7 from '../../assets/portfolio7.png'
 
 const data = [
   {
@@ -49,6 +50,13 @@ const data = [
     title: 'Pokedex App',
     github: 'https://github.com/youngjerald239/Pokedex',
     demo: 'https://jerald-pokedex.netlify.app/'
+  },
+  {
+    id: 7,
+    image: IMG7,
+    title: 'AI-Menu',
+    github: 'https://github.com/youngjerald239/ai_menu',
+    demo: 'https://aimenu.netlify.app/'
   }
 ]
 
