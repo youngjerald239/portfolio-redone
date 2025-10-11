@@ -1,14 +1,16 @@
 import React from 'react'
 import './header.css'
 import CTA from './CTA'
+import ThemeToggle from '../theme/ThemeToggle'
 import ME from '../../assets/me.png'
 import HeaderSocials from './HeaderSocials'
 
 
 const Header = () => {
   return (
-    <header>
+    <header id="home">
         <div className="container header_container">
+          <ThemeToggle />
           <h5>Hello I'm</h5>
           <h1>Jerald Young</h1>
           <h5 className="text-light">Fullstack Developer</h5>

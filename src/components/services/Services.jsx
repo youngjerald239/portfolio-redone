@@ -44,9 +44,14 @@ const Services = () => {
     <h5>Swipe to view more</h5>
 
     <Swiper className="container portfolios_container"
-     modules={[Pagination]}
-      spaceBetween={40}
-      slidesPerView={2}
+      modules={[Pagination]}
+      spaceBetween={20}
+      slidesPerView={3}
+      breakpoints={{
+        0: { slidesPerView: 1, spaceBetween: 16 },
+        640: { slidesPerView: 2, spaceBetween: 18 },
+        1024: { slidesPerView: 3, spaceBetween: 20 },
+      }}
       pagination={{ clickable: true }}>
       {
         data.map(({id, image, title, github, demo}) =>{
