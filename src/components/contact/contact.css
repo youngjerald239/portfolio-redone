@@ -13,18 +13,21 @@
 }
 
 .contact_option {
-    background: var(--color-bg-variant);
+    background: var(--color-secondary);
+    color: #fffaf3;
     padding: 1.2rem;
     border-radius: 1.2rem;
     text-align: center;
-    border: 1px solid transparent;
+    border: 1px solid rgba(31,138,138,0.2);
     transition: var(--transition);
     font-size: 0.7rem;
+    box-shadow: var(--shadow-s);
 }
 
 .contact_option:hover {
-    background: transparent;
-    border-color: var(--color-primary-variant);
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateX(6px);
 }
 
 .contact_option-icon {
@@ -50,8 +53,8 @@ input, textarea {
     width: 100%;
     padding: 1.5rem;
     border-radius: 0.5rem;
-    background: transparent;
-    border: 2px solid var(--color-primary-variant);
+    background: var(--color-bg-variant);
+    border: 2px solid rgba(32,42,53,0.12);
     resize: none;
     color: var(--color-white);
 }
@@ -70,4 +73,17 @@ input, textarea {
     .contact.contact_container {
         width: var(--container-width-sm);
     }
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 5px 5px 0 rgba(31,138,138,0.14);
+}
+
+[data-theme='dark'] input,
+[data-theme='dark'] textarea {
+    color: #f8efe4;
+    background: #263c43;
+    border-color: rgba(248,239,228,0.22);
 }
