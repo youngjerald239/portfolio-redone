@@ -2,7 +2,6 @@ import React from 'react'
 import './header.css'
 import CTA from './CTA'
 import ThemeToggle from '../theme/ThemeToggle'
-import ME from '../../assets/me.png'
 import HeaderSocials from './HeaderSocials'
 
 
@@ -11,14 +10,14 @@ const Header = () => {
     <header id="home">
         <div className="container header_container">
           <ThemeToggle />
-          <h5>Hello I'm</h5>
-          <h1>Jerald Young</h1>
-          <h5 className="text-light">Fullstack Developer</h5>
-          <CTA />
-          <HeaderSocials />
-          <div className="me">
-            <img src={ME} alt="me" />
+          <div className="header_copy">
+            <p className="eyebrow"><span></span> Available for select opportunities</p>
+            <h1>Jerald Young</h1>
+            <h2>Full-stack developer building thoughtful digital products.</h2>
+            <p className="header_intro">I combine engineering, design, and a user-first mindset to turn ambitious ideas into clear, useful experiences.</p>
+            <CTA />
           </div>
+          <HeaderSocials />
 
           <a href="#contact" className="scroll_down">Scroll Down</a>
         </div>

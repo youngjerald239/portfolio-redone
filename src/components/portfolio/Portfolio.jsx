@@ -13,6 +13,7 @@ const data = [
     id: 1,
     image: IMG1,
     title: 'React Weather App',
+    category: 'Product interface',
     github: 'https://github.com/youngjerald239/Weather_App',
     demo: 'https://jweather-app.netlify.app/'
   },
@@ -20,6 +21,7 @@ const data = [
     id: 2,
     image: IMG2,
     title: 'MyRume Social App',
+    category: 'Social platform',
     github: 'https://github.com/youngjerald239/MyRume-App',
     demo: 'https://myrume-d26d4.firebaseapp.com/'
   },
@@ -27,6 +29,7 @@ const data = [
     id: 3,
     image: IMG3,
     title: 'TechFlix streaming App',
+    category: 'Streaming experience',
     github: 'https://github.com/youngjerald239/techFlix',
     demo: 'https://techflix-a72fb.web.app/'
   },
@@ -34,6 +37,7 @@ const data = [
     id: 4,
     image: IMG4,
     title: 'Chattable Social App',
+    category: 'Community product',
     github: 'https://github.com/youngjerald239/Chattable-app',
     demo: 'https://chattable-ebfbb.web.app/'
   },
@@ -41,6 +45,7 @@ const data = [
     id: 5,
     image: IMG5,
     title: 'The Kat & KaPoodle App',
+    category: 'Service platform',
     github: 'https://github.com/youngjerald239/Petcareapp-frontend',
     demo: 'https://pet-care2.netlify.app/'
   },
@@ -48,6 +53,7 @@ const data = [
     id: 6,
     image: IMG6,
     title: 'Pokedex App',
+    category: 'Data-driven interface',
     github: 'https://github.com/youngjerald239/Pokedex',
     demo: 'https://jerald-pokedex.netlify.app/'
   },
@@ -55,6 +61,7 @@ const data = [
     id: 7,
     image: IMG7,
     title: 'AI-Menu',
+    category: 'AI-powered tool',
     github: 'https://github.com/youngjerald239/ai_menu',
     demo: 'https://aimenu.netlify.app/'
   }
@@ -63,17 +70,21 @@ const data = [
 const Portfolio = () => {
   return (
     <section id='portfolio'>
-    <h5>My FullStack Portfolio</h5>
-    <h2>Recent Work</h2>
+    <div className="section_heading">
+      <p className="eyebrow">Selected work</p>
+      <h2>Projects with purpose</h2>
+      <p className="section_intro">A selection of interfaces and products built with curiosity, care, and a bias toward clarity.</p>
+    </div>
 
     <div className="container portfolio_container">
       {
-        data.map(({id, image, title, github, demo}) =>{
+        data.map(({id, image, title, category, github, demo}, index) =>{
           return (
-            <article key={id} className="portfolio_item">
+            <article key={id} className={`portfolio_item ${index === 0 ? 'portfolio_item-featured' : ''}`}>
               <div className="portfolio_item-image">
                 <img src={image} alt={title}/>
               </div>
+              <p className="portfolio_item-category">{category}</p>
               <h3>{title}</h3>
               <div className="portfolio_item-cta">
                 <a href={github} className="btn" target="_blank" rel="noreferrer">Github</a>

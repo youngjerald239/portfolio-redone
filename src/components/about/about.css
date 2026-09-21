@@ -42,6 +42,7 @@
     box-shadow: var(--shadow-s);
     position: relative;
     overflow: hidden;
+    min-height: 13rem;
 }
 
 .about_card::before {
@@ -57,7 +58,7 @@
 
 .about_card:hover {
     border-color: transparent;
-    transform: translateY(-7px) rotate(-1deg);
+    transform: translateY(-10px) rotate(-2deg) scale(1.02);
     box-shadow: var(--shadow-l);
     cursor:default;
 
@@ -80,12 +81,43 @@
     color: var(--color-light);
 }
 
-[data-theme='dark'] .about_card small {
-    color: #f8efe4;
+.about_card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-top: 1rem;
+    color: var(--color-light);
+    font-size: 0.76rem;
+    line-height: 1.35;
+}
+
+.about_card-list li {
+    position: relative;
+    padding-left: 0.9rem;
+}
+
+.about_card-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 50%;
+    background: var(--color-primary);
+    transition: transform 300ms ease, background 300ms ease;
+}
+
+.about_card:nth-child(2) .about_card-list li::before { background: var(--color-secondary); }
+.about_card:nth-child(3) .about_card-list li::before { background: var(--color-accent); }
+
+.about_card:hover .about_card-list li::before {
+    transform: scale(1.5);
 }
 
 [data-theme='dark'] .about_card,
-[data-theme='dark'] .about_card h5 {
+[data-theme='dark'] .about_card h5,
+[data-theme='dark'] .about_card-list {
     color: #f8efe4;
 }
 
@@ -109,6 +141,7 @@
     .about_content  p {
         margin: 1rem 0 1.5rem
     }
+
 }
 
 
@@ -131,4 +164,5 @@
     .about_content p {
         margin: 1.5rem 0;
     }
+
 }

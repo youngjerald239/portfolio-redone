@@ -3,6 +3,7 @@ import './contact.css'
 import {MdOutlineMailOutline} from 'react-icons/md'
 import {BsLinkedin, BsTwitter} from 'react-icons/bs'
 import emailjs from 'emailjs-com'
+import ME from '../../assets/me.png'
 
 const Contact = () => {
   const form = useRef();
@@ -20,7 +21,12 @@ const Contact = () => {
       <h2>Contact Me</h2>
 
       <div className="container contact_container">
-          <div className="contact_options">
+               <div className="contact_profile">
+                  <div className="contact_portrait">
+                     <img src={ME} alt="Jerald Young" />
+                     <span>Let's build<br />something useful.</span>
+                  </div>
+                  <div className="contact_options">
              <article className="contact_option">
                 <MdOutlineMailOutline className='contact_option-icon'/>
                 <h4>Email</h4>
@@ -39,7 +45,8 @@ const Contact = () => {
                 <h5>https://twitter.com/messages</h5>
                 <a href="https://twitter.com/messages/compose?recipient_id={JeraldYoung19}" target="_blank" rel="noreferrer">Private Twitter message</a>
              </article>
-          </div>
+                  </div>
+              </div>
           <form ref={form} onSubmit={sendEmail}>
              <input type="text" name='name' placeholder='Your Full Name' required/>
              <input type="email" name='email' placeholder='Email Address' required/>

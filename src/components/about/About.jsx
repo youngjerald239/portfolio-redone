@@ -2,12 +2,13 @@ import React from 'react'
 import './about.css'
 import ME from '../../assets/me-about.png'
 import {GiAchievement, GiGameConsole} from 'react-icons/gi'
-import {FaDev, FaLaptopCode, FaHtml5, FaReact} from 'react-icons/fa'
-import {RiCustomerService2Fill} from 'react-icons/ri'
-import {MdOutlineSecurityUpdateWarning} from 'react-icons/md'
-import {FcSupport} from 'react-icons/fc'
-import {SiJavascript, SiCsswizardry, SiPython, SiUnrealengine, SiGodotengine} from 'react-icons/si'
-import {DiRuby, DiBootstrap, DiUnitySmall} from 'react-icons/di'
+import {FaDev} from 'react-icons/fa'
+
+const skillGroups = [
+  { title: 'Experience', icon: <GiAchievement className='about_icon'/>, items: ['Customer service', 'Graphic design', 'Frontend development', 'User-focused thinking'] },
+  { title: 'DevTools', icon: <FaDev className='about_icon'/>, items: ['HTML & CSS', 'JavaScript', 'React & Next.js', 'Python & Ruby', 'Bootstrap & Tailwind'] },
+  { title: 'Game development', icon: <GiGameConsole className='about_icon'/>, items: ['Python', 'Unreal Engine', 'Godot', 'Unity'] }
+]
 
 const About = () => {
   return (
@@ -22,21 +23,15 @@ const About = () => {
         </div>
         <div className="about_content">
           <div className="about_cards">
-            <article className='about_card'>
-              <GiAchievement className='about_icon'/>
-              <h5>Experience</h5>
-              <small><RiCustomerService2Fill/><MdOutlineSecurityUpdateWarning/><FaLaptopCode/><FcSupport/></small>
-            </article>
-            <article className='about_card'>
-              <FaDev className='about_icon'/>
-              <h5>DevTools</h5>
-              <small><FaHtml5/><SiJavascript/><SiCsswizardry/><FaReact/><DiBootstrap/><SiPython/><DiRuby/></small>
-            </article>
-            <article className='about_card'>
-              <GiGameConsole className='about_icon'/>
-              <h5>Video Game Developer</h5>
-              <small><SiPython/><SiUnrealengine/><SiGodotengine/><DiUnitySmall/></small>
-            </article>
+            {skillGroups.map(({title, icon, items}) => (
+              <article className='about_card' key={title}>
+                {icon}
+                <h5>{title}</h5>
+                <ul className="about_card-list">
+                  {items.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </article>
+            ))}
           </div>
             <p>
               Bringing graphic design and customer service skills into my work as a full-stack developer, 
@@ -47,6 +42,7 @@ const About = () => {
             <a href="#contact">Let's Chat!</a>
         </div>
       </div>
+
     </section>
   )
 }
