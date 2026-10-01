@@ -4,9 +4,10 @@ import IMG1 from '../../assets/portfolio1.png'
 import IMG2 from '../../assets/portfolio2.png'
 import IMG3 from '../../assets/portfolio3.png'
 import IMG4 from '../../assets/portfolio4.png'
-import IMG5 from '../../assets/portfolio5.png'
+import IMG5 from '../../assets/portfolio5.jpg'
 import IMG6 from '../../assets/portfolio6.png'
 import IMG7 from '../../assets/portfolio7.png'
+import IMG8 from '../../assets/portfolio8.png'
 
 const data = [
   {
@@ -64,6 +65,14 @@ const data = [
     category: 'AI-powered tool',
     github: 'https://github.com/youngjerald239/ai_menu',
     demo: 'https://aimenu.netlify.app/'
+  },
+  {
+    id: 8,
+    image: IMG8,
+    title: 'Canna-Bee',
+    category: 'Wellness brand website',
+    github: 'https://github.com/youngjerald239/CannaJournal',
+    demo: 'https://canna-bee.netlify.app/'
   }
 ]
 
