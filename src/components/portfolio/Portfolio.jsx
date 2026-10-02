@@ -8,6 +8,7 @@ import IMG5 from '../../assets/portfolio5.jpg'
 import IMG6 from '../../assets/portfolio6.png'
 import IMG7 from '../../assets/portfolio7.png'
 import IMG8 from '../../assets/portfolio8.png'
+import IMG9 from '../../assets/portfolio9.png'
 
 const data = [
   {
@@ -73,6 +74,14 @@ const data = [
     category: 'Wellness brand website',
     github: 'https://github.com/youngjerald239/CannaJournal',
     demo: 'https://canna-bee.netlify.app/'
+  },
+  {
+    id: 9,
+    image: IMG9,
+    title: 'MysTori Art Portfolio',
+    category: 'Artist Portfolio website',
+    github: 'https://github.com/youngjerald239/Mystori-Art-Portfolio',
+    demo: 'https://mystoriartportfolio.netlify.app/'
   }
 ]
 
