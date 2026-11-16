@@ -9,6 +9,7 @@ import IMG6 from '../../assets/portfolio6.png'
 import IMG7 from '../../assets/portfolio7.png'
 import IMG8 from '../../assets/portfolio8.png'
 import IMG9 from '../../assets/portfolio9.png'
+import IMG10 from '../../assets/portfolio10.png'
 
 const data = [
   {
@@ -82,6 +83,14 @@ const data = [
     category: 'Artist Portfolio website',
     github: 'https://github.com/youngjerald239/Mystori-Art-Portfolio',
     demo: 'https://mystoriartportfolio.netlify.app/'
+  },
+  {
+    id: 10,
+    image: IMG10,
+    title: 'Crown & Brim Studio',
+    category: 'Hairstylist & crochet shop website',
+    // Client project: the repository is private, so no GitHub link.
+    demo: 'https://hairstylist-website-bq92.onrender.com/'
   }
 ]
 
@@ -105,7 +114,7 @@ const Portfolio = () => {
               <p className="portfolio_item-category">{category}</p>
               <h3>{title}</h3>
               <div className="portfolio_item-cta">
-                <a href={github} className="btn" target="_blank" rel="noreferrer">Github</a>
+                {github && <a href={github} className="btn" target="_blank" rel="noreferrer">Github</a>}
                 <a href={demo} className="btn-primary" target="_blank" rel="noreferrer">Live Demo</a>
               </div>
             </article>
