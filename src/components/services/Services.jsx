@@ -16,21 +16,24 @@ const data = [
   {
     id: 1,
     image: AMG1,
-    title: 'Shadow Dog Animations: You can use the animate dropdown box to choose between many diffent animations.',
+    title: 'Shadow Dog Animations',
+    description: 'Pick an animation from the dropdown to switch between many different moves.',
     github: 'https://github.com/youngjerald239/dog_animation',
     demo: 'https://shadowdog.netlify.app/',
   },
   {
     id: 2,
     image: AMG2,
-    title: 'Parallax Animations:  The background has many layers scrolling across the screen at different speeds. Interact with the speed bar to increase, or decrease speed.',
+    title: 'Parallax Animations',
+    description: 'Background layers scroll at different speeds. Drag the speed bar to speed it up or slow it down.',
     github: 'https://github.com/youngjerald239/2d_background',
     demo: 'https://movebgr.netlify.app/'
   },
   {
     id: 3,
     image: AMG3,
-    title: 'Enemy Animations: One style oof enemy animations made to move around at random.',
+    title: 'Enemy Animations',
+    description: 'Enemies that wander the screen in random movement patterns.',
     github: 'https://github.com/youngjerald239/npc_movement',
     demo: 'https://enempc.netlify.app/'
   }
@@ -39,9 +42,11 @@ const data = [
 const Services = () => {
   return (
     <section id='services'>
-    <h5>My Character Animations</h5>
-    <h2>Recent Character Animations!</h2>
-    <h5>Swipe to view more</h5>
+    <div className="section_heading">
+      <p className="eyebrow">Motion</p>
+      <h2>Character animations</h2>
+      <p className="section_intro">Sprite and parallax experiments built in JavaScript.</p>
+    </div>
 
     <Swiper className="container portfolios_container"
       modules={[Pagination]}
@@ -54,17 +59,17 @@ const Services = () => {
       }}
       pagination={{ clickable: true }}>
       {
-        data.map(({id, image, title, github, demo}) =>{
+        data.map(({id, image, title, description, github, demo}) =>{
           return (
             <SwiperSlide key={id} className="portfolio_item">
               <div className="portfolio_item-image">
                 <img src={image} alt={title}/>
               </div>
               <h3>{title}</h3>
+              <p className="portfolio_item-description">{description}</p>
               <div className="portfolio_item-cta">
                 <a href={github} className="btn" target="_blank" rel="noreferrer">Github</a>
                 <a href={demo} className="btn-primary" target="_blank" rel="noreferrer">Live Demo</a>
-                <p></p>
               </div>
             </SwiperSlide>
           )

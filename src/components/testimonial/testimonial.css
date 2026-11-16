@@ -1,14 +1,16 @@
-.portfolio_container {
+/* Games section. Every rule is scoped to #testimonial so it no longer
+   restyles the cards in the Projects and Animations sections. */
+
+.games_container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-    padding-bottom: 4rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
 }
 
-.portfolio_item {
+#testimonial .portfolio_item {
     background: #fff1dc;
-    padding: 1.2rem;
-    border-radius: 1rem;
+    padding: 1rem;
+    border-radius: var(--radius);
     border: 1px solid rgba(232,93,74,0.2);
     transition: var(--transition);
     box-shadow: var(--shadow-s);
@@ -16,80 +18,156 @@
     overflow: hidden;
 }
 
-.portfolio_item::before {
+#testimonial .portfolio_item::before {
     content: '';
     position: absolute;
-    width: 78px;
-    height: 78px;
-    right: -32px;
-    top: -32px;
+    width: 72px;
+    height: 72px;
+    right: -30px;
+    top: -30px;
     border-radius: 50%;
     background: var(--color-primary);
     opacity: 0.22;
+    z-index: 1;
 }
 
-.portfolio_item:hover {
+#testimonial .portfolio_item:hover {
     border-color: var(--color-primary);
     transform: translateY(-7px) rotate(1deg);
     box-shadow: var(--shadow-l);
 }
 
-.portfolio_item-image {
-    border-radius: calc(var(--radius) - 4px);
+#testimonial .portfolio_item-image {
+    border-radius: calc(var(--radius) - 2px);
     overflow: hidden;
     aspect-ratio: 16 / 10;
 }
 
-.portfolio_item h3 {
-    margin: 1.2rem 0 1.2rem;
+#testimonial .portfolio_item:hover .portfolio_item-image img {
+    transform: scale(1.04);
+}
+
+#testimonial .portfolio_item h3 {
+    margin: 0.9rem 0 1rem;
+    font-size: 1rem;
     color: var(--color-ink);
     text-align: left;
-    min-height: 3.2rem;
     line-height: 1.35;
 }
 
-.portfolio_item-cta {
+#testimonial .portfolio_item-cta {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 0.75rem;
+    margin-bottom: 0.4rem;
     align-items: center;
-    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
-.swiper-pagination-clickable .swiper-pagination-bullet {
-    background: var(--color-primary);
-    
+/* ---------- Featured game: wide card, picture beside the text ---------- */
+#testimonial .game_featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: 1.75rem;
+    align-items: center;
+    padding: 1.25rem;
 }
 
-
-/* ======================= MEDIA QUERIES (MEDIUM DEVICES) =============================== */
-@media screen and (max-width: 1024px) {
-    .portfolio_container {
-        grid-template-columns: repeat(1fr, 1fr);
-        gap: 1.2rem;
-    }
+#testimonial .game_featured:hover {
+    transform: translateY(-5px);
 }
 
-
-/* ======================= MEDIA QUERIES (SMALL DEVICES) =============================== */
-@media screen and (max-width: 600px) {
-    .portfolio_container {
-        grid-template-columns: 1fr;
-    }
-
+#testimonial .game_featured .portfolio_item-image {
+    aspect-ratio: 16 / 9;
 }
 
-[data-theme='dark'] .portfolio_item {
-    background: #4a3c37;
-    border-color: rgba(255,128,109,0.35);
+/* Pixel art stays crisp when the browser resizes it, and isn't zoomed on hover. */
+#testimonial img.pixel-art {
+    image-rendering: pixelated;
 }
 
-[data-theme='dark'] .portfolio_item h3,
-[data-theme='dark'] .portfolio_item a {
+#testimonial .game_featured:hover .portfolio_item-image img.pixel-art {
+    transform: none;
+}
+
+#testimonial .game_featured h3 {
+    margin: 0.4rem 0 0.8rem;
+    min-height: 0;
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+}
+
+#testimonial .portfolio_item-category {
+    color: var(--color-primary);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.game_item-description {
+    margin-bottom: 1rem;
+    color: var(--color-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.game_item-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+}
+
+.game_item-tags li {
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.74rem;
+    font-weight: 600;
+}
+
+/* ---------- Dark theme ---------- */
+[data-theme='dark'] #testimonial .portfolio_item {
+    background: #3d3431;
+    border-color: rgba(255,128,109,0.3);
+}
+
+[data-theme='dark'] #testimonial .portfolio_item h3,
+[data-theme='dark'] #testimonial .portfolio_item .btn {
     color: #f8efe4;
 }
 
-[data-theme='dark'] .portfolio_item .btn-primary {
+[data-theme='dark'] #testimonial .portfolio_item .btn-primary {
     color: #17242b;
+}
+
+[data-theme='dark'] .game_item-description {
+    color: rgba(248, 239, 228, 0.8);
+}
+
+/* ======================= MEDIA QUERIES (MEDIUM DEVICES) =============================== */
+@media screen and (max-width: 1024px) {
+    .games_container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    #testimonial .game_featured {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* ======================= MEDIA QUERIES (SMALL DEVICES) =============================== */
+@media screen and (max-width: 600px) {
+    .games_container {
+        grid-template-columns: 1fr;
+    }
+
+    #testimonial .game_featured {
+        padding: 1rem;
+    }
 }

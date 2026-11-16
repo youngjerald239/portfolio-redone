@@ -1,5 +1,9 @@
 nav {
-    background: transparent;
+    /* Solid bar so page text doesn't show through while scrolling.
+       The shadow + clip-path stretch the bar to the full window width. */
+    background: var(--color-bg);
+    box-shadow: 0 0 0 100vmax var(--color-bg);
+    clip-path: inset(0 -100vmax);
     width: min(90%, 1100px);
     padding: 1.25rem 0;
     z-index: 2;
@@ -90,8 +94,8 @@ nav a.active {
         letter-spacing: 0.03em;
     }
 
-    .nav_links a:nth-child(2),
-    .nav_links a:nth-child(4) {
+    /* Phones show About, Work, Games and Contact; Motion is hidden for room. */
+    .nav_links a:nth-child(3) {
         display: none;
     }
 }

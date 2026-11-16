@@ -81,7 +81,16 @@
 .contact_option a {
     margin-top: 0.7rem;
     display: inline-block;
-    font-size: 0.8rem; 
+    font-size: 0.8rem;
+    /* Light text reads on both the teal card and its coral hover colour. */
+    color: #fffaf3;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.contact_option a:hover {
+    color: #fffaf3;
 }
 
 /* ======================= FORM ========================= */
@@ -132,4 +141,18 @@ input:focus, textarea:focus {
     color: #f8efe4;
     background: #263c43;
     border-color: rgba(248,239,228,0.22);
+}
+/* Message sent / failed note under the form */
+.form_status {
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+.form_status-error {
+    color: var(--color-primary);
+}
+
+form button[disabled] {
+    opacity: 0.7;
+    cursor: wait;
 }

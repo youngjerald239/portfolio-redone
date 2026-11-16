@@ -10,7 +10,6 @@ const Footer = () => {
       <ul className="permalinks">
   <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
         <li><a href="#portfolio">Projects</a></li>
         <li><a href="#services">Animation</a></li>
         <li><a href="#testimonial">Games</a></li>
@@ -18,15 +17,15 @@ const Footer = () => {
       </ul>
 
       <div className='footer_socials'>
-        <a href="https://twitter.com/JeraldYoung19"><BsTwitter/></a>
-        <a href="https://www.linkedin.com/in/jerald-young-232aa720a/"><BsLinkedin/></a>
-        <a href="https://github.com/youngjerald239"><BsGithub/></a>
-        <a href="https://www.instagram.com/appen.jerald/"><BsInstagram/></a>
-        <a href="https://youngjerald.itch.io/"><FaItchIo/></a>
+        <a href="https://twitter.com/JeraldYoung19" target="_blank" rel="noreferrer" aria-label="Twitter"><BsTwitter/></a>
+        <a href="https://www.linkedin.com/in/jerald-young-232aa720a/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><BsLinkedin/></a>
+        <a href="https://github.com/youngjerald239" target="_blank" rel="noreferrer" aria-label="GitHub"><BsGithub/></a>
+        <a href="https://www.instagram.com/appen.jerald/" target="_blank" rel="noreferrer" aria-label="Instagram"><BsInstagram/></a>
+        <a href="https://youngjerald.itch.io/" target="_blank" rel="noreferrer" aria-label="itch.io"><FaItchIo/></a>
       </div>
 
       <div className="footer_copyright">
-        <small>&copy; Jerald Young Portfolio. All rights reserved</small>
+        <small>&copy; {new Date().getFullYear()} Jerald Young. All rights reserved.</small>
       </div>
     </footer>
   )

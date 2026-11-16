@@ -13,12 +13,14 @@ const skillGroups = [
 const About = () => {
   return (
     <section id='about'>
-      <h5>Get To Know</h5>
-      <h2>About Me</h2>
+      <div className="section_heading">
+        <p className="eyebrow">Get to know me</p>
+        <h2>About me</h2>
+      </div>
       <div className="container about_container">
         <div className="about_me">
           <div className="about_me-image">
-            <img src={ME} alt="about-me"/>
+            <img src={ME} alt="Jerald Young avatar"/>
           </div>
         </div>
         <div className="about_content">
